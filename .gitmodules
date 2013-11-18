@@ -1,0 +1,6 @@
+[submodule "lib/kivent"]
+	path = lib/kivent
+	url = https://github.com/Kovak/KivEnt.git
+[submodule "lib/cymunk"]
+	path = lib/cymunk
+	url = https://github.com/tito/cymunk
