@@ -1,51 +1,41 @@
-## Use buildout with kivy
-
-If you've never used buildout before look at buildout.cfg the list
-of eggs is the set of dependencies to download and use with your
-project.
-
-It's worth noting that putting kivy in your buildout.cfg will work
-on osx and linux, but not on windows; to be cross platform nicely
-you are better using downloading kivy manually on the target system
-and loading it manually.
-
-### This example
-
-This is the plasma example from the kivy-examples repo, with the added lines:
-
-    import collada
-    import mechanize
-    import whatever
-
-To demonstrate how to work with other packages while using kivy.
+## Quicking start
 
 ### OSX
 
+Get started:
+
+    Install xcode command line tools
+    xcode-select --install
+
 Buildout:
 
-    kivy bootstrap.py
+    pip install cython
+    python bootstrap.py
     ./bin/buildout
 
 Run:
 
-    kivy ./bin/py plasma.py
+    kivy ./bin/py plasma.py <--- Or whatever kivent app.
 
 
 ## Windows
 
-Use msys, seriously, if you're using the default terminal, don't bother.
+Get started:
 
-On the bright side, msys and kivy to work very well together~ :)
+    Install visual studio 2008
+    http://www.microsoft.com/en-au/download/details.aspx?id=7873
 
 Buildout:
 
-    /c/path/to/python/python bootstrap.py
+    . /c/path/to/kivy/kivyenv.sh
+    pip install cython
+    python bootstrap.py
     ./bin/buildout
 
 Run:
 
     . /c/path/to/kivy/kivyenv.sh
-    ./bin/py plasma.py
+    ./bin/py plasma.py <-- Or whatever kivent app.
 
 Didn't work? Make sure you did '. /c/kivy/kivyenv.sh', otherwise the environment
 variables won't be loaded. Check with 'echo $PYTHONPATH'; it should contain a
